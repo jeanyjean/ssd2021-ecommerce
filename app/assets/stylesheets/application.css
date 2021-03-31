@@ -22,3 +22,7 @@
 .hoverable-row:hover {
     background-color: rgb(255, 0, 0);;
 }
+
+.choice {
+    margin-right: 10px;
+}
