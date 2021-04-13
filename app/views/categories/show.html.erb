@@ -8,7 +8,7 @@
 <p>
   <strong>Products:</strong>
   <% @category.products.each do |product| %>
-    <%= link_to product do %>
+    <%= link_to admins_product_path(product) do %>
       <span class="badge badge-dark">
       <%= product.title %> 
       </span>

@@ -1,5 +1,9 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
+
+    <% if @product.primary_image.attached? %>
+      <%= image_tag @product.primary_image %>
+    <%end%>
     <h1>
       <%= @product.title %>
     </h1>
@@ -22,7 +26,17 @@
         <span href="#" class="badge badge-primary"><%= category.name %></span>
       <% end %>
     </p>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', root_path %>
+
+    <p>
+      <strong>Supporting images:</strong>
+      <% if @product.supporting_images.attached? %>
+        <% @product.supporting_images.each do |image| %>
+          <%= image_tag image, width: "100px", height: "100px" %>
+        <% end %>
+      <%end%>
+    </p>
+
+    <%= link_to 'Edit', edit_admins_product_path(@product) %> |
+    <%= link_to 'Back', admins_products_path %>
   </div>
 </div>
