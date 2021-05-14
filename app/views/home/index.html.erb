@@ -15,7 +15,7 @@
             <p class="card-text">$299(PlaceHolder)</p> 
             <%= link_to 'View details', admins_product_path(pr), class: "btn details px-auto" %>
             <br /> 
-            <a href="#" class="btn cart px-auto">ADD TO CART</a>
+            <%= link_to 'Buy now!', orders_new_path(:id => pr.id), class: "btn cart px-auto" %>
           </div>
         </div>
       </div>
